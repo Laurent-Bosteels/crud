@@ -2,6 +2,7 @@
 declare(strict_types=1);
 
 //include all your model files here
+require 'Model/Database.php';
 require 'Model/User.php';
 //include all your controllers here
 require 'Controller/StudentsController.php';
