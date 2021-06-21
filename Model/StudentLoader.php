@@ -22,6 +22,7 @@ class StudentLoader
     {
         return $this->students;
     }
+
     public function getStudentById(int $id)
     {
         foreach ($this->students as $student) {

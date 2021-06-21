@@ -6,6 +6,8 @@ require 'Model/Database.php';
 require 'Model/Person.php';
 require 'Model/Student.php';
 require 'Model/StudentLoader.php';
+require 'Model/Classroom.php';
+require 'Model/ClassroomLoader.php';
 require 'Model/User.php';
 
 //include all your controllers here
