@@ -1,5 +1,7 @@
 # Title: Create, Read, Update, Delete
 
+![screenshot](https://github.com/Laurent-Bosteels/crud/blob/main/img/diagram.png?raw=true)
+
 - Repository: `php-crud`
 - Type of Challenge: `Learning Challenge`
 - Duration: `3 days`
