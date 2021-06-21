@@ -14,7 +14,11 @@ class InfoController
         $loaderClass= new ClassroomLoader();
         $allClasses = $loaderClass->getClasses();
         var_dump($allClasses);
-        
+
+        $loaderTeacher= new TeacherLoader();
+        $allTeachers = $loaderTeacher->getTeachers();
+        var_dump($allTeachers);
+
         require 'View/info.php';
     }
 }
