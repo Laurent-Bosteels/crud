@@ -1,10 +1,13 @@
 <?php require 'includes/header.php'?>
-    <section>
-        <h4>Classroom page</h4>
+<section class="section">
+    <div class="container">
+        <div class="columns is-multiline">
+            <div class="column">
 
-        <p><a href="index.php">Back to homepage</a></p>
+                <?php var_dump($allClasses); ?>
 
-        <?php var_dump($allClasses); ?>
-
-    </section>
+            </div>
+        </div>
+    </div>
+</section>
 <?php require 'includes/footer.php'?>

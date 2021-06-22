@@ -1,10 +1,17 @@
-<?php require 'includes/header.php'?>
-    <section>
-        <h4>Student page</h4>
+<?php require 'includes/header.php' ?>
 
-        <p><a href="index.php">Back to homepage</a></p>
+<section class="section">
+    <div class="container">
+        <div class="columns is-multiline">
+            <div class="column">
 
-<?php var_dump($allStudents); ?>    
+                <?php var_dump($allStudents); ?>
 
-    </section>
-<?php require 'includes/footer.php'?>
+            </div>
+        </div>
+    </div>
+</section>
+        
+
+
+<?php require 'includes/footer.php' ?>
