@@ -14,7 +14,7 @@
     <!-- logo / brand -->
     <div class="navbar-brand">
       <a class="navbar-item">
-        <img src="..." style="max-height: 50px"
+        <img src="img/icon.png" style="max-height: 50px"
           class="py-2 px-2">
       </a>
       <a class="navbar-burger" id="burger">
