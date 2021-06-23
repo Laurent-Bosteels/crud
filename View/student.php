@@ -4,57 +4,39 @@
     <div class="container">
         <div class="columns is-multiline">
             <div class="column">
-
-                <button class="button is-primary my-2" id="create">+ Create</button>
+                <form action="" method="POST">
                 <table class="table is-bordered is-striped is-fullwidth">
                     <tr class="th is-selected">
-                    
                         <th>Student ID</th>
                         <th>Student Name</th>
                         <th>Email</th>
                         <th>Class ID</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
+                        <th></th>
+                        <th></th>
                     </tr>
 
-                    <?php
-                    foreach ($allStudents as $row) {
-                        echo '<tr><td>' . '#' . $row->getId() . '</td><td>' . $row->getName() . '</td><td>' . $row->getEmail() . '</td><td>' . '#' . $row->getClassId() . '</td><td>' . '<button class="button is-warning">Edit</button>' . '</td>' . '</td><td>' . '<button class="button is-danger">Delete</button>' . '</td></tr>';
-                    } ?>
-
+                    <tr>
+                        <td></td>
+                        <td><input id="name" name="name" type="text" class="input" placeholder="Name"></td>
+                        <td><input id="email" name="email" input type="text" class="input" placeholder="Email"></td>
+                        <td>
+                            <div class="select">
+                                <select name="classId">
+                                    <?php foreach ($allClasses as $class) {
+                                        echo "<option value=" . $class->getId() . ">" . $class->getName() . "</option>";
+                                    } ?>
+                                </select>
+                            </div>
+                        </td>
+                        <td></td>
+                        <td><button name="add" value="add" class="button is-primary">Create</button></td>
+                    </tr>
+                        <?php
+                        foreach ($allStudents as $row) {
+                            echo '<tr><td>' . '#' . $row->getId() . '</td><td>' . $row->getName() . '</td><td>' . $row->getEmail() . '</td><td>' . '#' . $row->getClassId() . '</td><td>' . '<button value="' . $row->getId() . '" class="button is-warning modal-button" data-target="#modal2" aria-haspopup="true">Edit</button>' . '</td>' . '</td><td>' . '<button name="delete" value="' . $row->getId() . '" class="button is-danger">Delete</button>' . '</td></tr>';
+                        } ?>
                 </table>
-
-                <!-- modal -->
-                <div class="modal">
-                    <div class="modal-background"></div>
-                    <div class="modal-content has-background-white py-5 px-5">
-                        <h3 class="title mb-6">Create a new student</h3>
-                        <form action="" method="POST">
-                            <div class="field">
-                                <label class="label">Name</label>
-                                <div class="control">
-                                    <input id="name" name="name" type="text" class="input" placeholder="Name">
-                                </div>
-                            </div>
-                            <div class="field">
-                                <label class="label">Email</label>
-                                <div class="control">
-                                    <input id="email" name="email" input type="text" class="input" placeholder="Email">
-                                </div>
-                            </div>
-                            <div class="field">
-                                <label class="label">Class ID</label>
-                                <div class="control">
-                                    <input id="classId" name="classId" input type="text" class="input" placeholder="e.g. 1 ">
-                                </div>
-                            </div>
-                            <div class="mt-6 has-text-centered">
-                                <button button name="add" value="add" class="button is-warning">Create</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
+                </form>
                 <?php var_dump($allStudents); ?>
 
             </div>

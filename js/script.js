@@ -1,12 +1,22 @@
-// modal
-const createButton = document.querySelector('#create');
-const modalBg = document.querySelector('.modal-background');
-const modal = document.querySelector('.modal');
+document.querySelectorAll(".modal-button").forEach(function(el) {
+	el.addEventListener("click", function() {
+		var target = document.querySelector(el.getAttribute("data-target"));
 
-createButton.addEventListener('click', () => {
-  modal.classList.add('is-active');
-});
+		target.classList.add("is-active");
 
-modalBg.addEventListener('click', () => {
-  modal.classList.remove('is-active');
+		// target
+		// 	.querySelectorAll(".modal-close, .modal-background")
+		// 	.addEventListener("click", function() {
+		// 		target.classList.remove("is-active");
+		// 	});
+		// how to do multiple selectors??
+
+		target.querySelector('.modal-close').addEventListener('click', function () {
+		  target.classList.remove('is-active');
+		});
+
+		target.querySelector('.modal-background').addEventListener('click', function () {
+		  target.classList.remove('is-active');
+		});
+	});
 });
