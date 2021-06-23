@@ -7,8 +7,8 @@
                 <form action="" method="POST">
                     <table class="table is-bordered is-striped is-fullwidth">
                         <tr class="th is-selected">
-                            <th>Student ID</th>
-                            <th>Student Name</th>
+                            <th>Teacher ID</th>
+                            <th>Teacher Name</th>
                             <th>Email</th>
                             <th></th>
                             <th></th>
@@ -37,7 +37,7 @@
 
                     </table>
                 </form>
-
+                
                 <?php var_dump($allTeachers); ?>
 
             </div>
