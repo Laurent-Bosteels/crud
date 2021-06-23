@@ -30,10 +30,23 @@
                             <td></td>
                             <td><button name="add" value="add" class="button is-primary">Create</button></td>
                         </tr>
+
                         <?php
                         foreach ($allStudents as $row) {
-                            echo '<tr><td>' . '#' . $row->getId() . '</td><td>' . $row->getName() . '</td><td>' . $row->getEmail() . '</td><td>' . '#' . $row->getClassId() . '</td><td>' . '<button name="edit" class="button is-warning" value="' . $row->getId() . '">Edit</button>' . '</td>' . '</td><td>' . '<button name="delete" value="' . $row->getId() . '" class="button is-danger">Delete</button>' . '</td></tr>';
-                        } ?>
+                            echo
+                            '<tr>
+                            <td>' . $row->getId() . '</td><td>' . $row->getName() . '</td><td>' . $row->getEmail() . '</td><td>';
+                            if ($loaderClass->getClassById($row->getClassId()) === null) {
+                                echo "Unassigned";
+                            } else {
+                                echo ($loaderClass->getClassById($row->getClassId()))->getName();
+                            };
+                            echo '</td><td><button name="edit" class="button is-warning" value="' . $row->getId() . '">Edit</button></td>
+                            <td><button name="delete" value="' . $row->getId() . '" class="button is-danger">Delete</button></td>
+                            </tr>';
+                        }
+                        ?>
+
                     </table>
                 </form>
 
