@@ -1,15 +1,25 @@
 <?php
-declare(strict_types = 1);
+declare(strict_types=1);
 
-class TeacherController
+class Teachercontroller
 {
-    //render function with both $_GET and $_POST vars available if it would be needed.
     public function render(array $GET, array $POST)
     {
+        $loaderTeacher = new TeacherLoader();
+        
+        if (isset($POST['add']) and isset($POST['name']) and isset($POST['email'])) {
+            $loaderTeacher->addTeacher($POST['name'], $POST['email']);
+            $POST['add'] = 0;}
+        elseif (isset($POST['edit'])) {
+            $loaderTeacher->changeTeacher($POST['name'], $POST['email'], $POST['edit']);
+            $POST['edit'] = 0;
+        } elseif (isset($POST['delete'])) {
+            $loaderTeacher->deleteTeacher($POST['delete']);
+            $POST['delete'] = 0;
+        } 
 
-        $loaderTeacher= new TeacherLoader();
-        $allTeachers = $loaderTeacher->getTeachers();
-
+        $allTeachers = $loaderTeacher->getTeachers(); 
         require 'View/teacher.php';
+
     }
 }

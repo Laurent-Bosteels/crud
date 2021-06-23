@@ -4,25 +4,41 @@
     <div class="container">
         <div class="columns is-multiline">
             <div class="column">
+                <form action="" method="POST">
+                    <table class="table is-bordered is-striped is-fullwidth">
+                        <tr class="th is-selected">
+                            <th>Student ID</th>
+                            <th>Student Name</th>
+                            <th>Email</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        <tr class="tr">
+                            <td></td>
+                            <td><input id="name" name="name" type="text" class="input" placeholder="Name"></td>
+                            <td><input id="email" name="email" input type="text" class="input" placeholder="Email"></td>
+                            <td></td>
+                            <td><button name="add" value="add" class="button is-primary">Create</button></td>
+                        </tr>
+                        
+                        <?php
+                        foreach ($allTeachers as $row) {
+                            echo 
+                            
+                            '<tr>
+                            <td>' . '#' . $row->getId() . '</td>
+                            <td>' . $row->getName() . '</td>
+                            <td>' . $row->getEmail() . '</td>
+                            <td>' . '<button name="edit" class="button is-warning" value="' . $row->getId() . '">Edit</button>' . '</td>
+                            <td>' . '<button name="delete" value="' . $row->getId() . '" class="button is-danger">Delete</button>' . '</td>
+                            </tr>';
+
+                        } ?>
+
+                    </table>
+                </form>
 
                 <?php var_dump($allTeachers); ?>
-
-                <button class="button is-primary my-2" id="create">+ Create</button>
-                <table class="table is-bordered is-striped is-fullwidth">
-                    <tr class="th is-selected">
-                        <th>Teacher ID</th>
-                        <th>Teacher Name</th>
-                        <th>Email</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
-                    </tr>
-
-                    <?php
-                    foreach ($allTeachers as $row) {
-                        echo '<tr><td>' . '#' . $row->getId() . '</td><td>' . $row->getName() . '</td><td>' . $row->getEmail() . '</td><td>' . '<button class="button is-warning">Edit</button>' . '</td>' . '</td><td>' . '<button class="button is-danger">Delete</button>' . '</td></tr>';
-                    } ?>
-
-                </table>
 
             </div>
         </div>
