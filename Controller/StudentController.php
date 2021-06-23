@@ -10,7 +10,7 @@ class StudentController
         $loaderStudent = new StudentLoader();
         $loaderClass = new ClassroomLoader();
 
-        if (isset($POST['name']) and isset($POST['email']) and ((isset($POST['classId'])and is_numeric($POST['classId'])))){
+        if (isset($POST['name']) and isset($POST['add']) and isset($POST['email']) and ((isset($POST['classId'])and is_numeric($POST['classId'])))){
             $loaderStudent->addStudent($POST['name'],$POST['email'],$POST['classId']);
             header("Refresh:0");
         } elseif (isset($POST['delete'])) {
