@@ -49,9 +49,7 @@
 
                     </table>
                 </form>
-
-                <?php var_dump($allStudents); ?>
-
+                
             </div>
         </div>
     </div>

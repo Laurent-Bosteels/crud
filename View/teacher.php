@@ -48,9 +48,6 @@
 
                     </table>
                 </form>
-
-                <?php var_dump($allTeachers); ?>
-
             </div>
         </div>
     </div>
