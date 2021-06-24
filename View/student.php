@@ -10,7 +10,7 @@
                             <th>Student ID</th>
                             <th>Student Name</th>
                             <th>Email</th>
-                            <th>Class ID</th>
+                            <th>Class Name</th>
                             <th></th>
                             <th></th>
                         </tr>
