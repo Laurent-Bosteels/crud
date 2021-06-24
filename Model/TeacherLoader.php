@@ -59,9 +59,6 @@ class TeacherLoader
         if (!empty($checkClass)) {
             return "Teacher is still assigned to a class";
         } else {
-            $handle2 = $con->prepare('UPDATE class SET teacher_id = NULL WHERE teacher_id = :id2');
-            $handle2->bindValue(':id2', $id);
-            $handle2->execute();
             $handle = $con->prepare('DELETE FROM teacher WHERE teacher_id = :id');
             $handle->bindValue(':id', $id);
             $handle->execute();
