@@ -4,7 +4,7 @@
     <div class="container">
         <div class="columns is-multiline">
             <div class="column">
-                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+                <form action="" method="POST">
 
                     <?php if (isset($teacherMessage)) {
                         echo '
@@ -48,6 +48,7 @@
 
                     </table>
                 </form>
+
             </div>
         </div>
     </div>
