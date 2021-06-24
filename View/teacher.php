@@ -5,6 +5,18 @@
         <div class="columns is-multiline">
             <div class="column">
                 <form action="" method="POST">
+
+                    <?php if (isset($teacherMessage)) {
+                        echo '
+                            <article class="message is-danger">
+                            <div class="message-header">
+                            <p>Error</p>
+                            <button class="delete" aria-label="delete"></button>
+                            </div>
+                            <div class="message-body"> ' . $teacherMessage . ' </div>
+                            </article>';
+                    } ?>
+
                     <table class="table is-bordered is-striped is-fullwidth">
                         <tr class="th is-selected">
                             <th>Teacher ID</th>
@@ -20,11 +32,11 @@
                             <td></td>
                             <td><button name="add" value="add" class="button is-primary">Create</button></td>
                         </tr>
-                        
+
                         <?php
                         foreach ($allTeachers as $row) {
-                            echo 
-                            
+                            echo
+
                             '<tr>
                             <td>' . '#' . $row->getId() . '</td>
                             <td>' . $row->getName() . '</td>
@@ -32,12 +44,11 @@
                             <td>' . '<button name="edit" class="button is-warning" value="' . $row->getId() . '">Edit</button>' . '</td>
                             <td>' . '<button name="delete" value="' . $row->getId() . '" class="button is-danger">Delete</button>' . '</td>
                             </tr>';
-
                         } ?>
 
                     </table>
                 </form>
-                
+
                 <?php var_dump($allTeachers); ?>
 
             </div>

@@ -21,7 +21,7 @@ You have to provide the following pages for Students, Teacher & Class.
     * This page should have a "create new" button
 - [x] A detailed overview of the selected entity
     * This should include a button to delete this entity
-    - [ ] Edge case: A teacher cannot be removed if he is still assigned to a class
+    - [x] Edge case: A teacher cannot be removed if he is still assigned to a class
     - [x] Edge case: If you remove a class, make sure to remove the link between the students and the class.
 - [x] A page to edit an existing entity
 - [x] A page to create a new entity

@@ -14,7 +14,7 @@ class Teachercontroller
             $loaderTeacher->changeTeacher($POST['name'], $POST['email'], $POST['edit']);
             $POST['edit'] = 0;
         } elseif (isset($POST['delete'])) {
-            $loaderTeacher->deleteTeacher($POST['delete']);
+            $teacherMessage = $loaderTeacher->deleteTeacher($POST['delete']);
             $POST['delete'] = 0;
         } 
 
