@@ -4,7 +4,7 @@
     <div class="container">
         <div class="columns is-multiline">
             <div class="column">
-                <form action="" method="POST">
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
 
                     <?php if (isset($teacherMessage)) {
                         echo '

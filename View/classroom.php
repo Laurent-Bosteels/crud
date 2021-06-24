@@ -4,7 +4,7 @@
     <div class="container">
         <div class="columns is-multiline">
             <div class="column">
-                <form action="" method="POST">
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
 
                     <table class="table is-bordered is-striped is-fullwidth">
                         <tr class="th is-selected">
