@@ -6,7 +6,6 @@
             <div class="column">
                 <form action="" method="POST">
 
-
                 <!-- cards  -->
 
 <section class="section">
@@ -43,7 +42,7 @@
                         <img src="https://image.flaticon.com/icons/png/512/65/65882.png" alt="img">
                     </div>
                     <div class="card-content has-text-centered">
-                        <p><a href=""><?php echo $students?> students</a></p>
+                    <td><a href="index.php?page=student&teacherid=<?php echo $data3->getId()?>">Show all <?php echo $students?> students</a></td>
                         <p class="title is-size-5">Assigned to</p>
                     </div>
                 </div>
