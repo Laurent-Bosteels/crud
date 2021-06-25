@@ -30,7 +30,6 @@ require 'Controller/HomepageController.php';
 require 'Controller/StudentController.php';
 require 'Controller/ClassroomController.php';
 require 'Controller/TeacherController.php';
-require 'Controller/OverviewController.php';
 
 //you could write a simple IF here based on some $_GET or $_POST vars, to choose your controller
 //this file should never be more than 20 lines of code!
@@ -43,8 +42,6 @@ if (isset($_GET['page']) && $_GET['page'] === 'student') {
     $controller = new ClassroomController();
 } elseif (isset($_GET['page']) && $_GET['page'] === 'teacher') {
     $controller = new TeacherController();
-} elseif (isset($_GET['page']) && $_GET['page'] === 'overview') {
-    $controller = new OverviewController();
-}
+} 
 
 $controller->render($_GET, $_POST);

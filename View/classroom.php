@@ -5,6 +5,7 @@
         <div class="columns is-multiline">
             <div class="column">
                 <form action="" method="POST">
+                <td><button name="add" value="add" class="button is-primary my-2">Create class</button></td>
 
                     <table class="table is-bordered is-striped is-fullwidth">
                         <tr class="th is-selected">
@@ -12,8 +13,7 @@
                             <th>Class Name</th>
                             <th>Location</th>
                             <th>Teacher</th>
-                            <th></th>
-                            <th></th>
+                            <th>Action</th>
                         </tr>
                         <tr class="tr">
                             <td></td>
@@ -28,7 +28,6 @@
                                     </select>
                             </td>
                             <td></td>
-                            <td><button name="add" value="add" class="button is-primary">Create</button></td>
                         </tr>
 
                         <?php
@@ -39,8 +38,7 @@
                             <td>' . $row->getName() . '</td>
                             <td>' . $row->getLocation() . '</td>
                             <td>' . ($loaderTeachers->getTeacherById($row->getTeacherId()))->getName() . '</td>
-                            <td>' . '<button name="edit" class="button is-warning" value="' . $row->getId() . '">Edit</button>' . '</td>
-                            <td>' . '<button name="delete" value="' . $row->getId() . '" class="button is-danger">Delete</button>' . '</td>
+                            <td> <a href="index.php?page=overview&id=' . $row->getId() . '" class="button is-primary" value="' . $row->getId() . '">Details</a>' . ' ' . '<button name="edit" class="button is-warning" value="' . $row->getId() . '">Edit</button>' . ' ' . '<button name="delete" value="' . $row->getId() . '" class="button is-danger">Delete</button>' . '</td>
                             </tr>';
                         } ?>
 

@@ -45,9 +45,6 @@ class ClassroomLoader
 
     public function deleteClass($id) {
         $con = Database::openConnection();
-        $handle2 = $con->prepare('UPDATE student SET class_id = NULL WHERE class_id = :id2');
-        $handle2->bindValue(':id2', $id);
-        $handle2->execute();
         $handle = $con->prepare('DELETE FROM class WHERE class_id = :id');
         $handle->bindValue(':id', $id);
         $handle->execute();

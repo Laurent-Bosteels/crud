@@ -5,14 +5,15 @@
         <div class="columns is-multiline">
             <div class="column">
                 <form action="" method="POST">
+
+                    <button name="add" value="add" class="button is-primary my-2">Create student</button>
                     <table class="table is-bordered is-striped is-fullwidth">
                         <tr class="th is-selected">
                             <th>Student ID</th>
                             <th>Student Name</th>
                             <th>Email</th>
                             <th>Class Name</th>
-                            <th></th>
-                            <th></th>
+                            <th>Action</th>
                         </tr>
                         <tr class="tr">
                             <td></td>
@@ -28,7 +29,6 @@
                                 </div>
                             </td>
                             <td></td>
-                            <td><button name="add" value="add" class="button is-primary">Create</button></td>
                         </tr>
 
                         <?php
@@ -41,15 +41,14 @@
                             } else {
                                 echo ($loaderClass->getClassById($row->getClassId()))->getName();
                             };
-                            echo '</td><td><button name="edit" class="button is-warning" value="' . $row->getId() . '">Edit</button></td>
-                            <td><button name="delete" value="' . $row->getId() . '" class="button is-danger">Delete</button></td>
+                            echo '</td><td>' . '<a href="index.php?page=student&id=' . $row->getId() . '" class="button is-primary" value="' . $row->getId() . '">Details</a>' . ' ' . '<button name="edit" class="button is-warning" value="' . $row->getId() . '">Edit</button>' . ' ' . '<button name="delete" value="' . $row->getId() . '" class="button is-danger">Delete</button>' . '</td>
                             </tr>';
                         }
                         ?>
 
                     </table>
                 </form>
-                
+
             </div>
         </div>
     </div>

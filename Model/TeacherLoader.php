@@ -65,7 +65,6 @@ class TeacherLoader
         }
     }
 
-
     public function addTeacher($name, $email)
     {
         $con = Database::openConnection();
@@ -74,5 +73,15 @@ class TeacherLoader
         $handle->bindValue(':email', $email);
         $handle->execute();
     }
+
+    public function getTeacherByStudentId(int $id)
+    {
+        $con = Database::openConnection();
+        $handle = $con->prepare('SELECT teacher.* FROM teacher INNER JOIN class ON teacher.teacher_id = class.teacher_id INNER JOIN student ON class.class_id = student.class_id WHERE student.student_id = :id');
+        $handle->bindValue(':id', $id);
+        $handle->execute();
+        return $selectedTeacher = $handle->fetchAll();
+    }
+    
 
 }
