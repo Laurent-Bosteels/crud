@@ -29,7 +29,6 @@
         <a class="navbar-item" href="index.php?page=student">Students</a>
         <a class="navbar-item" href="index.php?page=teacher">Teacher</a>
         <a class="navbar-item" href="index.php?page=classroom">Class</a>
-        <a class="navbar-item" href="index.php?page=overview">Overview</a>
       </div>
     </div>
   </nav>

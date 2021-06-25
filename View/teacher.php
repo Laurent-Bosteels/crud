@@ -39,7 +39,7 @@
                             <td>' . '#' . $row->getId() . '</td>
                             <td>' . $row->getName() . '</td>
                             <td>' . $row->getEmail() . '</td>
-                            <td> <a href="index.php?page=overview&id=' . $row->getId() . '" class="button is-primary" value="' . $row->getId() . '">Details</a>' . ' ' . '<button name="edit" class="button is-warning" value="' . $row->getId() . '">Edit</button>' . ' ' . '<button name="delete" value="' . $row->getId() . '" class="button is-danger">Delete</button>' . '</td>
+                            <td> <a href="index.php?page=teacher&id=' . $row->getId() . '" class="button is-primary" value="' . $row->getId() . '">Details</a>' . ' ' . '<button name="edit" class="button is-warning" value="' . $row->getId() . '">Edit</button>' . ' ' . '<button name="delete" value="' . $row->getId() . '" class="button is-danger">Delete</button>' . '</td>
                             </tr>';
                         } ?>
 

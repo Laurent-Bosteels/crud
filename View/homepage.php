@@ -3,7 +3,7 @@
 Anything complex should be calculated in the model -->
 <section>
 
-<p>content here</p>
+<p>Login page will come here</p>
 
 </section>
 <?php require 'includes/footer.php'?>

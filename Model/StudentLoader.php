@@ -58,4 +58,13 @@ class StudentLoader
         $handle->bindValue(':id', $id);
         $handle->execute();
     }
+
+    public function getAllStudentsByTeacherId($id){
+        $con = Database::openConnection();
+        $handle = $con->prepare('SELECT student.* FROM student INNER JOIN class ON student.class_id = class.class_id INNER JOIN teacher ON class.teacher_id = teacher.teacher_id WHERE teacher.teacher_id = :id');
+        $handle->bindValue(':id', $id);
+        $handle->execute();
+        return $handle->fetchAll();
+
+    }
 }

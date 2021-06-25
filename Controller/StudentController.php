@@ -29,7 +29,7 @@ class StudentController
         if(isset($GET['id'])){
             $data3 = $loaderStudent->getStudentById((int)$GET['id']);
             $teacherNew = $loaderTeacher->getTeacherByStudentId($data3->getId());
-            require 'View/overview.php';
+            require 'View/studentoverview.php';
         } else {
             require 'View/student.php';
         }
