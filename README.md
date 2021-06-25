@@ -1,6 +1,11 @@
 # Title: Create, Read, Update, Delete
 
 ![screenshot](https://github.com/Laurent-Bosteels/crud/blob/main/img/diagram.png?raw=true)
+![screenshot](https://github.com/Laurent-Bosteels/crud/blob/main/img/1.png?raw=true)
+![screenshot](https://github.com/Laurent-Bosteels/crud/blob/main/img/2.png?raw=true)
+![screenshot](https://github.com/Laurent-Bosteels/crud/blob/main/img/3.png?raw=true)
+![screenshot](https://github.com/Laurent-Bosteels/crud/blob/main/img/4.png?raw=true)
+![screenshot](https://github.com/Laurent-Bosteels/crud/blob/main/img/5.png?raw=true)
 
 - Repository: `php-crud`
 - Type of Challenge: `Learning Challenge`
